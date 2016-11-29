@@ -145,6 +145,21 @@ ctx.drawImage(variable holding the image, X coordinate of the top left of the im
 
 
 
+function doKeyDown(evt){
+  switch (evt.keyCode) {
+    case 38:  /* Up arrow was pressed */
+       if (y - dy > 0){ 
+        y -= dy;
+        clear();
+        checkcollision();
+        if (collision == 1){
+          y += dy;
+          collision = 0;
+        } 
+      }
+
+
+
 
 
 
