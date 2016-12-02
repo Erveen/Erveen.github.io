@@ -113,54 +113,6 @@ ctx.fillStyle = "purple";
 rect(x, y, 15,15);
 }
 
-init();
-window.addEventListener('keydown',doKeyDown,true);
-</script>
-</section>
-<aside> </aside>
-<footer> </footer>
-</body>
-</html> 
-
-
-<div>
-<canvas id="canvas" width="482" height="482">
-This text is displayed if your browser does not support HTML5 Canvas.
-</canvas>
-</div>﻿  
-
-var img = new Image();
-function init() {
-  canvas = document.getElementById("canvas");
-  ctx = canvas.getContext("2d");
-  img.src = "maze.gif"; 
-  return setInterval(draw, 10);
-}
-function clear() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  ctx.drawImage(img, 0, 0);
-}
-ctx.drawImage(variable holding the image, X coordinate of the top left of the image, Y coordinate of the top left of the image)
-
-
-
-
-function doKeyDown(evt){
-  switch (evt.keyCode) {
-    case 38:  /* Up arrow was pressed */
-        if (y - dy > 0){ 
-        y -= dy;
-        clear();
-        checkcollision();
-        if (collision == 1){
-          y += dy;
-          collision = 0;
-        } 
-      }
-
-  
-
-
 function createTimer(seconds) {
     intervalVar = setInterval(function () {
         makeWhite(mazeWidth, 0, canvas.width - mazeWidth, canvas.height);
@@ -195,6 +147,31 @@ function createTimer(seconds) {
         context.fillText(minutes.toString() + ":" + secondsToShow, mazeWidth + 30, canvas.height / 2);
         seconds--;
     }, 
+  
+  
+  
+init();
+window.addEventListener('keydown',doKeyDown,true);
+</script>
+</section>
+<aside> </aside>
+<footer> </footer>
+</body>
+</html> 
+
+
+<div>
+<canvas id="canvas" width="482" height="482">
+This text is displayed if your browser does not support HTML5 Canvas.
+</canvas>
+</div>
+
+
+
+  
+
+
+
                              
                              
                              
