@@ -148,7 +148,7 @@ ctx.drawImage(variable holding the image, X coordinate of the top left of the im
 function doKeyDown(evt){
   switch (evt.keyCode) {
     case 38:  /* Up arrow was pressed */
-       if (y - dy > 0){ 
+        if (y - dy > 0){ 
         y -= dy;
         clear();
         checkcollision();
@@ -194,9 +194,15 @@ function createTimer(seconds) {
         }
         context.fillText(minutes.toString() + ":" + secondsToShow, mazeWidth + 30, canvas.height / 2);
         seconds--;
-    }, 1000);
-}
+    }, 
+                             
+                             
+                             
 
+                             
+                             
+                             
+                             
 
 
 
