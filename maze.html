@@ -44,7 +44,7 @@ canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 img.src = "maze.gif";
 return setInterval(draw, 10);
-    createTimer(60);
+  
 }
 
 function doKeyDown(evt){
@@ -154,6 +154,10 @@ function createTimer(seconds) {
 init();
 window.addEventListener('keydown',doKeyDown,true);
 
+    drawMazeAndRectangle(425, 3); // added already
+window.addEventListener("keydown", moveRect, true); // added already
+createTimer(120); // add this line
+                  // 120 seconds -> 2 minutes
 </script>
 </section>
 <aside> </aside>
