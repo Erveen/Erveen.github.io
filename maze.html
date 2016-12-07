@@ -47,7 +47,11 @@ ctx.fill();
 
         if (--timer < 0) {
             timer = duration;
-         alert("Time up! Try again! Refresh the page to play again.");
+         alert("Time up! Try again! Refresh the page to play again."); 
+         else(--timer < 3){
+          timer = duration;
+          alert("You finished! On to the next level.")
+          
         }
     }, 1000);
 }
