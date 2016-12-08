@@ -47,11 +47,35 @@ ctx.fill();
 
         if (--timer < 0) {
             timer = duration;
-         alert("Time up! Try again! Refresh the page to play again."); 
+         
         }
     }, 1000);
 }
 
+ <form name="timer">
+<input type="text" value="" name="field">
+</form>
+
+<script language="JavaScript"><!--
+var counter = 15;
+
+function countDown() {
+    document.timer.field.value = counter-- + ' seconds left';
+    if (counter != -1)
+        setTimeout('countDown()',1000);
+    else
+        alert('You lose');
+}
+
+countDown();
+//--></script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 window.onload = function () {
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
