@@ -42,16 +42,12 @@ ctx.fill();
         display.textContent = minutes + ":" + seconds;
         if (--timer < 0) {
             timer = duration;
-         alert("Time up! Try again! Refresh the page to play again.");
-         
+         alert("Time up! Try again! Refresh the page to play again."); 
+    
           
-         
-         
-         
         }
     }, 1000);
-    }
-   
+}
 window.onload = function () {
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
@@ -143,6 +139,8 @@ window.addEventListener('keydown',doKeyDown,true);
 <footer> </footer>
 </body>
 </html> 
+
+
 <div>
 <canvas id="canvas" width="482" height="482">
 This text is displayed if your browser does not support HTML5 Canvas.
